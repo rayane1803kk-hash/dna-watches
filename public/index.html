@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DNA Watches</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-logo">
+      <span class="logo-dna">DNA</span>
+      <span class="logo-watches">WATCHES</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cart" onclick="toggleCart()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">🕐 DNA WATCHES · ALGÉRIE</div>
+      <h1 class="hero-title">WEAR THE<br><span class="accent">DNA.</span></h1>
+      <p class="hero-sub">Montres originales · Livraison 69 wilayas · Paiement à la livraison</p>
+      <div class="hero-btns">
+        <a href="#collection" class="btn-primary">Voir la collection</a>
+        <a href="https://wa.me/213778997572" target="_blank" class="btn-outline">WhatsApp</a>
+      </div>
+      <div class="hero-badges">
+        <div class="badge-item">✅ Livraison 69 wilayas</div>
+        <div class="badge-item">✅ Paiement à la livraison</div>
+        <div class="badge-item">✅ 31.8K abonnés</div>
+      </div>
+    </div>
+    <div class="hero-ticker">
+      <div class="ticker-track">
+        <span>NAVIFORCE</span><span>·</span><span>PATEK PHILIPPE</span><span>·</span><span>CURREN</span><span>·</span><span>HUBLOT</span><span>·</span><span>FESTINA</span><span>·</span><span>SKMEI</span><span>·</span>
+        <span>NAVIFORCE</span><span>·</span><span>PATEK PHILIPPE</span><span>·</span><span>CURREN</span><span>·</span><span>HUBLOT</span><span>·</span><span>FESTINA</span><span>·</span><span>SKMEI</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="collection" class="collection-section">
+    <div class="section-header">
+      <h2>COLLECTION</h2>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="homme">Homme</button>
+        <button class="filter-btn" data-filter="femme">Femme</button>
+        <button class="filter-btn" data-filter="naviforce">Naviforce</button>
+        <button class="filter-btn" data-filter="curren">Curren</button>
+        <button class="filter-btn" data-filter="patek">Patek</button>
+      </div>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="loading" id="loading">Chargement...</div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <div class="about-left">
+        <div class="about-logo-big">DNA</div>
+      </div>
+      <div class="about-right">
+        <p class="eyebrow">QUI SOMMES-NOUS</p>
+        <h2>La montre que tu veux,<br>livrée chez toi.</h2>
+        <p>DNA Watches est une boutique en ligne algérienne spécialisée dans les montres originales pour homme et femme. Livraison dans toutes les wilayas, paiement à la livraison.</p>
+        <div class="about-stats">
+          <div><strong>31.8K</strong><span>Abonnés</span></div>
+          <div><strong>69</strong><span>Wilayas</span></div>
+          <div><strong>100%</strong><span>Original</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>COMMANDER</h2>
+    <p>Contactez-nous sur WhatsApp ou Instagram pour passer commande.</p>
+    <div class="contact-cards">
+      <a href="https://wa.me/213778997572" target="_blank" class="contact-card whatsapp">
+        <span>📱</span> WhatsApp: 0778997572
+      </a>
+      <a href="tel:+213797537731" class="contact-card">
+        <span>📞</span> 07 97537731
+      </a>
+      <a href="mailto:dnawatches.business@gmail.com" class="contact-card">
+        <span>✉️</span> dnawatches.business@gmail.com
+      </a>
+      <a href="https://www.instagram.com/dna__watches/" target="_blank" class="contact-card">
+        <span>📸</span> @dna__watches
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">DNA WATCHES</div>
+    <p>Boutique en ligne · Algérie · Livraison 69 wilayas</p>
+    <p class="footer-small">© 2024 DNA Watches · Tous droits réservés</p>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Panier</h3>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer" id="cartFooter"></div>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+  <div class="product-modal" id="productModal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
